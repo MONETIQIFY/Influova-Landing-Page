@@ -1,0 +1,14 @@
+# Netlify configuration for the Influova landing page.
+# This is a plain static site — no build step required.
+
+[build]
+  publish = "."
+  command = ""
+
+# Nice-to-have security & caching headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

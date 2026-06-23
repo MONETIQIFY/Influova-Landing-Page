@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Influova — Your Brand. Your Revenue.</title>
+  <meta name="description" content="Influova turns your personal brand into real revenue. Apply to work with us and we'll be in touch." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Influova — Your Brand. Your Revenue." />
+  <meta property="og:description" content="We monetise personal brands. Apply to work with us." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Decorative background glows -->
+  <div class="bg-glow bg-glow--one" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--two" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="nav__brand">
+      <img src="assets/logo.png" alt="Influova" class="nav__logo" onerror="this.style.display='none'" />
+      <span class="nav__name">INFLUOVA</span>
+    </a>
+    <a href="#apply" class="btn btn--ghost nav__cta">Apply</a>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="top" class="hero">
+    <div class="hero__inner">
+      <div class="hero__logo-wrap">
+        <!-- Inline SVG recreation of the logo mark so it renders instantly -->
+        <svg class="hero__mark" viewBox="0 0 200 200" role="img" aria-label="Influova logo">
+          <defs>
+            <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#9b6cff" />
+              <stop offset="100%" stop-color="#e84aa0" />
+            </linearGradient>
+          </defs>
+          <rect x="55"  y="55"  width="18" height="100" rx="9" fill="url(#barGrad)" />
+          <rect x="78"  y="72"  width="18" height="83"  rx="9" fill="url(#barGrad)" opacity="0.85" />
+          <rect x="101" y="62"  width="18" height="93"  rx="9" fill="url(#barGrad)" />
+          <rect x="124" y="80"  width="18" height="75"  rx="9" fill="url(#barGrad)" opacity="0.85" />
+          <rect x="147" y="50"  width="18" height="105" rx="9" fill="url(#barGrad)" />
+          <circle cx="156" cy="34" r="11" fill="url(#barGrad)" />
+        </svg>
+      </div>
+
+      <h1 class="hero__title">
+        Your Brand.<br />
+        <span class="gradient-text">Your Revenue.</span>
+      </h1>
+
+      <p class="hero__sub">
+        Influova is the agency that turns your personal brand into a real,
+        predictable income stream. You build the audience — we build the business
+        around it.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#apply" class="btn btn--primary">Apply to work with us</a>
+        <a href="#results" class="btn btn--ghost">See the results</a>
+      </div>
+
+      <p class="hero__note">Limited spots. We only take on creators we know we can grow.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHAT WE DO ============ -->
+  <section class="section" id="what">
+    <div class="section__head">
+      <span class="eyebrow">What we do</span>
+      <h2 class="section__title">We handle the business so you can stay creative</h2>
+      <p class="section__lead">
+        Most creators leave the majority of their money on the table. We plug in the
+        strategy, the systems and the sales engine that turn followers into revenue —
+        end to end.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card__icon">📈</div>
+        <h3 class="card__title">Brand &amp; Monetisation Strategy</h3>
+        <p class="card__text">
+          We audit your audience and content, then build a clear roadmap to revenue —
+          offers, pricing and positioning that actually convert.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card__icon">🤝</div>
+        <h3 class="card__title">Brand Deals &amp; Partnerships</h3>
+        <p class="card__text">
+          We pitch, negotiate and close paid collaborations on your behalf so you get
+          better deals without the back-and-forth.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card__icon">💸</div>
+        <h3 class="card__title">Products &amp; Offers</h3>
+        <p class="card__text">
+          From digital products to memberships, we help you launch revenue streams you
+          own — not ones that depend on the algorithm.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card__icon">⚙️</div>
+        <h3 class="card__title">Systems &amp; Management</h3>
+        <p class="card__text">
+          Funnels, automations and day-to-day management handled for you, so growth
+          doesn't mean more work on your plate.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS / TESTIMONIAL ============ -->
+  <section class="section section--results" id="results">
+    <div class="section__head">
+      <span class="eyebrow">Proof</span>
+      <h2 class="section__title">Real creators. Real results.</h2>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial__media">
+        <img src="assets/kieran.jpg" alt="Kieran McCartney" class="testimonial__photo"
+             onerror="this.closest('.testimonial__media').classList.add('testimonial__media--placeholder'); this.style.display='none';" />
+        <span class="testimonial__initials" aria-hidden="true">KM</span>
+      </div>
+
+      <div class="testimonial__body">
+        <div class="testimonial__quote-mark" aria-hidden="true">&ldquo;</div>
+        <blockquote class="testimonial__quote">
+          We partnered with <strong>Kieran McCartney</strong> to rebuild how his personal
+          brand makes money — sharpening his positioning, structuring his offers and
+          setting up the systems behind the scenes. The result was a brand that finally
+          earns like the audience deserves, without Kieran having to manage the business
+          side himself.
+        </blockquote>
+        <div class="testimonial__person">
+          <span class="testimonial__name">Kieran McCartney</span>
+          <span class="testimonial__role">Influova client</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="results__note">
+      We're an early, hands-on agency — that means you get our full attention. The next
+      success story could be yours.
+    </p>
+  </section>
+
+  <!-- ============ APPLY ============ -->
+  <section class="section section--apply" id="apply">
+    <div class="apply__card">
+      <div class="apply__intro">
+        <span class="eyebrow">Apply</span>
+        <h2 class="section__title">Let's grow your brand</h2>
+        <p class="section__lead">
+          Tell us where to reach you. If we think we're a fit, we'll be in contact
+          personally by <strong>email or phone</strong>.
+        </p>
+      </div>
+
+      <!-- Netlify form. Submissions are captured in your Netlify dashboard and emailed to you. -->
+      <form
+        name="apply"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/?success=true"
+        class="form"
+        id="applyForm"
+      >
+        <!-- Required by Netlify to link the JS-rendered form to the build-time form -->
+        <input type="hidden" name="form-name" value="apply" />
+        <!-- Honeypot: hidden from humans, catches bots -->
+        <p class="hidden">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form__row">
+          <label class="form__field">
+            <span class="form__label">Full name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+
+          <label class="form__field">
+            <span class="form__label">Email</span>
+            <input type="email" name="email" placeholder="you@email.com" required />
+          </label>
+        </div>
+
+        <div class="form__row">
+          <label class="form__field">
+            <span class="form__label">Instagram handle</span>
+            <input type="text" name="instagram" placeholder="@yourhandle" required />
+          </label>
+
+          <label class="form__field">
+            <span class="form__label">Phone number</span>
+            <input type="tel" name="phone" placeholder="+44 7000 000000" required />
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block">Submit application</button>
+        <p class="form__fineprint">We'll only use your details to get in touch about working together.</p>
+      </form>
+
+      <!-- Success state (shown after submit) -->
+      <div class="success" id="successMessage" hidden>
+        <div class="success__check" aria-hidden="true">✓</div>
+        <h2 class="success__title">Application received 🎉</h2>
+        <p class="success__text">
+          Thanks for applying to Influova. We've got your details and a member of our
+          team will be in contact with you shortly by <strong>email</strong> or
+          <strong>phone</strong>. Keep an eye on your inbox and your phone.
+        </p>
+        <a href="#top" class="btn btn--ghost">Back to top</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="nav__name">INFLUOVA</span>
+      <span class="footer__tag">Your brand. Your revenue.</span>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Influova. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
