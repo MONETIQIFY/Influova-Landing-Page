@@ -122,7 +122,26 @@ img { max-width: 100%; display: block; }
   font-size: 1.1rem;
   color: var(--text);
 }
+.nav__links { display: flex; align-items: center; gap: 18px; }
+.nav__link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.18s ease;
+}
+.nav__link:hover { color: var(--text); }
+.nav__link { white-space: nowrap; }
 .nav__cta { padding: 10px 22px; }
+
+/* On small screens the logo already reads "INFLUOVA", so drop the text label
+   to give the Contact/Apply links room. */
+@media (max-width: 560px) {
+  .nav { padding: 16px; }
+  .nav__name { display: none; }
+  .nav__links { gap: 12px; }
+  .nav__cta { padding: 9px 18px; }
+}
 
 /* ============ HERO ============ */
 .hero {
@@ -406,6 +425,24 @@ img { max-width: 100%; display: block; }
 .success__title { font-size: 1.9rem; font-weight: 800; margin-bottom: 14px; }
 .success__text { color: var(--text-muted); max-width: 480px; margin: 0 auto 26px; font-size: 1.05rem; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ============ CONTACT ============ */
+.section--contact { text-align: center; }
+.contact__card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(155,108,255,0.08), rgba(232,74,160,0.06));
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(32px, 5vw, 56px);
+}
+.contact__btn {
+  margin-top: 28px;
+  font-size: 1.05rem;
+  gap: 10px;
+}
+.contact__btn svg { width: 20px; height: 20px; }
+.contact__note { margin-top: 18px; color: var(--text-muted); font-size: 0.9rem; }
 
 /* ============ FOOTER ============ */
 .footer {
