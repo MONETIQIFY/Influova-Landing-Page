@@ -321,6 +321,77 @@ img { max-width: 100%; display: block; }
 }
 .form__fineprint { text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
 
+/* ============ PHONE (country dial code) ============ */
+.phone { position: relative; display: flex; gap: 8px; }
+.phone__country {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+.phone__country:hover { border-color: rgba(155,108,255,0.5); }
+.phone__country:focus-visible { outline: none; border-color: var(--purple); box-shadow: 0 0 0 3px rgba(155,108,255,0.18); }
+.phone__caret { width: 16px; height: 16px; color: var(--text-muted); transition: transform 0.2s ease; }
+.phone__country[aria-expanded="true"] .phone__caret { transform: rotate(180deg); }
+.phone__input { flex: 1; min-width: 0; }
+
+.phone__dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 20;
+  width: 320px;
+  max-width: min(360px, 86vw);
+  background: #15151f;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  padding: 10px;
+  animation: fadeUp 0.16s ease;
+}
+.phone__search {
+  width: 100%;
+  padding: 11px 14px !important;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+.phone__search:focus { outline: none; border-color: var(--purple); box-shadow: 0 0 0 3px rgba(155,108,255,0.18); }
+.phone__list { list-style: none; max-height: 260px; overflow-y: auto; margin: 0; padding: 0; }
+.phone__list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.phone__list li:hover,
+.phone__list li.is-active { background: var(--grad-soft); }
+.phone__list li .c-name { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.phone__list li .c-dial { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.phone__empty { text-align: center; color: var(--text-muted); padding: 16px 0; font-size: 0.9rem; }
+
+/* Scrollbar styling for the country list */
+.phone__list::-webkit-scrollbar { width: 8px; }
+.phone__list::-webkit-scrollbar-thumb { background: rgba(155,108,255,0.35); border-radius: 8px; }
+
 /* ============ SUCCESS ============ */
 .success { text-align: center; padding: 20px 0; animation: fadeUp 0.5s ease; }
 .success__check {

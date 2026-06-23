@@ -239,10 +239,24 @@
             <input type="text" name="instagram" placeholder="@yourhandle" required />
           </label>
 
-          <label class="form__field">
-            <span class="form__label">Phone number</span>
-            <input type="tel" name="phone" placeholder="+44 7000 000000" required />
-          </label>
+          <div class="form__field">
+            <span class="form__label" id="phoneLabel">Phone number</span>
+            <div class="phone" id="phoneWidget">
+              <button type="button" class="phone__country" id="phoneCountryBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select country dial code">
+                <span class="phone__dial" id="phoneDial">+44</span>
+                <svg class="phone__caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <input type="tel" class="phone__input" id="phoneInput" placeholder="7000 000000" inputmode="tel" aria-labelledby="phoneLabel" required />
+              <div class="phone__dropdown" id="phoneDropdown" hidden>
+                <input type="text" class="phone__search" id="phoneSearch" placeholder="Search country..." autocomplete="off" />
+                <ul class="phone__list" id="phoneList" role="listbox" aria-label="Countries"></ul>
+                <p class="phone__empty" id="phoneEmpty" hidden>No matches</p>
+              </div>
+            </div>
+            <!-- Submitted to Netlify: combined number + selected country -->
+            <input type="hidden" name="phone" id="phoneField" />
+            <input type="hidden" name="country" id="countryField" />
+          </div>
         </div>
 
         <button type="submit" class="btn btn--primary btn--block">Submit application</button>
