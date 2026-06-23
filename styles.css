@@ -70,6 +70,9 @@ img { max-width: 100%; display: block; }
 
 .hidden { position: absolute; left: -9999px; opacity: 0; }
 
+/* Ensure the [hidden] attribute always wins, even over display:flex elements */
+[hidden] { display: none !important; }
+
 /* ============ BUTTONS ============ */
 .btn {
   display: inline-flex;
