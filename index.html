@@ -19,6 +19,16 @@
 </head>
 <body>
 
+  <!-- Shared gradient definition for line icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="iconGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#9b6cff" />
+        <stop offset="100%" stop-color="#e84aa0" />
+      </linearGradient>
+    </defs>
+  </svg>
+
   <!-- Decorative background glows -->
   <div class="bg-glow bg-glow--one" aria-hidden="true"></div>
   <div class="bg-glow bg-glow--two" aria-hidden="true"></div>
@@ -87,7 +97,12 @@
 
     <div class="cards">
       <article class="card">
-        <div class="card__icon">📈</div>
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#iconGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 3v18h18" />
+            <path d="M19 9l-5 5-4-4-3 3" />
+          </svg>
+        </div>
         <h3 class="card__title">Brand &amp; Monetisation Strategy</h3>
         <p class="card__text">
           We audit your audience and content, then build a clear roadmap to revenue —
@@ -96,7 +111,14 @@
       </article>
 
       <article class="card">
-        <div class="card__icon">🤝</div>
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#iconGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 11a4 4 0 1 0-8 0" />
+            <path d="M12 11v4" />
+            <path d="M5 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2" />
+            <circle cx="12" cy="6" r="0.5" />
+          </svg>
+        </div>
         <h3 class="card__title">Brand Deals &amp; Partnerships</h3>
         <p class="card__text">
           We pitch, negotiate and close paid collaborations on your behalf so you get
@@ -105,7 +127,12 @@
       </article>
 
       <article class="card">
-        <div class="card__icon">💸</div>
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#iconGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="2" x2="12" y2="22" />
+            <path d="M17 6.5H9.5a3 3 0 0 0 0 6h5a3 3 0 0 1 0 6H6" />
+          </svg>
+        </div>
         <h3 class="card__title">Products &amp; Offers</h3>
         <p class="card__text">
           From digital products to memberships, we help you launch revenue streams you
@@ -114,7 +141,12 @@
       </article>
 
       <article class="card">
-        <div class="card__icon">⚙️</div>
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#iconGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3" />
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+          </svg>
+        </div>
         <h3 class="card__title">Systems &amp; Management</h3>
         <p class="card__text">
           Funnels, automations and day-to-day management handled for you, so growth
@@ -220,7 +252,7 @@
       <!-- Success state (shown after submit) -->
       <div class="success" id="successMessage" hidden>
         <div class="success__check" aria-hidden="true">✓</div>
-        <h2 class="success__title">Application received 🎉</h2>
+        <h2 class="success__title">Application received</h2>
         <p class="success__text">
           Thanks for applying to Influova. We've got your details and a member of our
           team will be in contact with you shortly by <strong>email</strong> or

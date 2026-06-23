@@ -206,12 +206,12 @@ img { max-width: 100%; display: block; }
 .card__icon {
   width: 52px; height: 52px;
   display: grid; place-items: center;
-  font-size: 1.5rem;
   border-radius: 14px;
   background: var(--grad-soft);
   border: 1px solid rgba(155,108,255,0.2);
   margin-bottom: 18px;
 }
+.card__icon svg { width: 26px; height: 26px; }
 .card__title { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
 .card__text { color: var(--text-muted); font-size: 0.98rem; }
 
